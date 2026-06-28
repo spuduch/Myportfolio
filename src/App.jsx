@@ -207,6 +207,11 @@ function Hero() {
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <a href="#projects" style={btnPrimary}>View Projects</a>
           <a href="#contact" style={btnOutline}>Get in touch</a>
+          <a
+            href="/Sai_Srinath_Resume.pdf"
+            download="Sai_Srinath_Resume.pdf"
+            style={btnOutline}
+          >↓ Resume</a>
         </div>
 
         {/* stats row */}
@@ -585,17 +590,32 @@ function Contact() {
           Open to senior IAM / IGA roles — India or remote.<br />
           Hyderabad, India · +91 8897008834 · saisrinath0814@gmail.com
         </p>
-        <button
-          onClick={handleEmail}
-          style={{
-            ...btnPrimary,
-            width: '100%', maxWidth: 280,
-            justifyContent: 'center', display: 'flex', alignItems: 'center', gap: 8,
-            fontSize: 14,
-          }}
-        >
-          {copied ? '✓ Opened mail app' : `✉️ ${email}`}
-        </button>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 20 }}>
+          <button
+            onClick={handleEmail}
+            style={{
+              ...btnPrimary,
+              width: '100%', maxWidth: 280,
+              justifyContent: 'center', display: 'flex', alignItems: 'center', gap: 8,
+              fontSize: 14,
+            }}
+          >
+            {copied ? '✓ Opened mail app' : `✉️ ${email}`}
+          </button>
+          <a
+            href="/Sai_Srinath_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              ...btnOutline,
+              width: '100%', maxWidth: 280,
+              justifyContent: 'center', display: 'flex', alignItems: 'center', gap: 8,
+              fontSize: 14,
+            }}
+          >
+            📄 View Resume
+          </a>
+        </div>
         <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center', gap: 16 }}>
           {[
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/puducheri-sai-srinath-79884623a/' },
