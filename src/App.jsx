@@ -591,7 +591,7 @@ function Contact() {
         <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center', gap: 16 }}>
           {[
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/puducheri-sai-srinath-79884623a/' },
-            { label: 'GitHub', href: 'https://github.com' },
+            { label: 'GitHub', href: 'https://github.com/spuduch' },
           ].map(({ label, href }) => (
             <a key={label} href={href} target="_blank" rel="noreferrer" style={{
               fontSize: 13, color: T.textMuted,
