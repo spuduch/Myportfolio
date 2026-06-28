@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import profileImage from './Images/IMG_20251023_010948_805.png';
 
 /* ─── GLOBAL STYLES ───────────────────────────────────────────────── */
 const globalCss = `
@@ -156,11 +157,12 @@ function Hero() {
   return (
     <section id="about" style={{
       minHeight: '100vh',
-      display: 'flex', alignItems: 'center',
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem',
       padding: '6rem 2rem 4rem',
       maxWidth: 900, margin: '0 auto',
+      flexWrap: 'wrap',
     }}>
-      <div style={{ animation: 'fadeUp 0.7s ease both' }}>
+      <div style={{ animation: 'fadeUp 0.7s ease both', flex: '1 1 320px', maxWidth: 560 }}>
         {/* headline */}
         <h1 style={{
           fontSize: 'clamp(36px, 6vw, 64px)',
@@ -213,6 +215,24 @@ function Hero() {
             </div>
           ))}
         </div>
+      </div>
+      <div style={{
+        flex: '0 0 260px',
+        display: 'flex', justifyContent: 'center', alignItems: 'center',
+        animation: 'fadeUp 0.8s ease both',
+      }}>
+        <img
+          src={profileImage}
+          alt="Sai Srinath"
+          style={{
+            width: '240px',
+            height: '240px',
+            objectFit: 'cover',
+            borderRadius: '50%',
+            border: `2px solid ${T.border}`,
+            boxShadow: '0 20px 45px rgba(0,0,0,0.25)',
+          }}
+        />
       </div>
     </section>
   );
