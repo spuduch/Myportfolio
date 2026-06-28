@@ -31,6 +31,13 @@ const globalCss = `
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
+
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
 `;
 
 /* ─── TOKENS ──────────────────────────────────────────────────────── */
