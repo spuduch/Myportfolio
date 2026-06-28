@@ -558,11 +558,12 @@ function Contact() {
   const [copied, setCopied] = useState(false);
   const email = 'saisrinath0814@gmail.com';
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+  const handleEmail = () => {
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+    const opened = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    if (!opened) {
+      window.location.href = `mailto:${email}`;
+    }
   };
 
   return (
@@ -585,7 +586,7 @@ function Contact() {
           Hyderabad, India · +91 8897008834 · saisrinath0814@gmail.com
         </p>
         <button
-          onClick={handleCopy}
+          onClick={handleEmail}
           style={{
             ...btnPrimary,
             width: '100%', maxWidth: 280,
@@ -593,7 +594,7 @@ function Contact() {
             fontSize: 14,
           }}
         >
-          {copied ? '✓ Copied!' : `📋 ${email}`}
+          {copied ? '✓ Opened mail app' : `✉️ ${email}`}
         </button>
         <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center', gap: 16 }}>
           {[
