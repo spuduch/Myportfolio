@@ -131,9 +131,21 @@ function Nav({ active }) {
 
   return (
     <nav style={navStyle}>
-      <span style={{ fontFamily: T.mono, fontSize: 14, color: T.violet, fontWeight: 600, letterSpacing: '-0.5px' }}>
-        SS<span style={{ color: T.textMuted }}>.iam</span>
-      </span>
+      <a href="#about" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <span style={{
+          width: 34, height: 34, borderRadius: '50%',
+          background: `linear-gradient(135deg, ${T.violet}, ${T.violetLt})`,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          color: '#fff', fontSize: 13, fontWeight: 700, fontFamily: T.mono,
+          boxShadow: `0 8px 24px ${T.violetDim}`,
+        }}>
+          SS
+        </span>
+        <span style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.05 }}>
+          <span style={{ fontSize: 13, fontWeight: 700, color: T.textPri, letterSpacing: '-0.4px' }}>Sai Srinath</span>
+          <span style={{ fontSize: 10, color: T.textMuted, fontFamily: T.mono, letterSpacing: '0.8px', textTransform: 'uppercase' }}>IAM • Identity</span>
+        </span>
+      </a>
       <div style={{ display: 'flex', gap: '2rem' }}>
         {links.map(l => (
           <a
@@ -170,6 +182,18 @@ function Hero() {
       flexWrap: 'wrap',
     }}>
       <div style={{ animation: 'fadeUp 0.7s ease both', flex: '1 1 320px', maxWidth: 560 }}>
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: 8,
+          padding: '7px 12px', borderRadius: 999,
+          background: 'rgba(255,255,255,0.04)',
+          border: `1px solid ${T.border}`,
+          marginBottom: '1.25rem',
+        }}>
+          <span style={{ width: 8, height: 8, borderRadius: '50%', background: T.violet }} />
+          <span style={{ fontSize: 12, fontFamily: T.mono, color: T.violetLt, fontWeight: 600, letterSpacing: '0.3px' }}>
+            SailPoint • IAM • Identity Governance
+          </span>
+        </div>
         {/* headline */}
         <h1 style={{
           fontSize: 'clamp(36px, 6vw, 64px)',
