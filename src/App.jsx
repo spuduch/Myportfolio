@@ -131,7 +131,7 @@ function Nav({ active }) {
 
   return (
     <nav style={navStyle}>
-      <a href="#about" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+      <a href="#about" style={{ display: 'flex', alignItems: 'center' }}>
         <span style={{
           width: 34, height: 34, borderRadius: '50%',
           background: `linear-gradient(135deg, ${T.violet}, ${T.violetLt})`,
@@ -140,10 +140,6 @@ function Nav({ active }) {
           boxShadow: `0 8px 24px ${T.violetDim}`,
         }}>
           SS
-        </span>
-        <span style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.05 }}>
-          <span style={{ fontSize: 13, fontWeight: 700, color: T.textPri, letterSpacing: '-0.4px' }}>Sai Srinath</span>
-          <span style={{ fontSize: 10, color: T.textMuted, fontFamily: T.mono, letterSpacing: '0.8px', textTransform: 'uppercase' }}>IAM • Identity</span>
         </span>
       </a>
       <div style={{ display: 'flex', gap: '2rem' }}>
