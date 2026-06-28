@@ -179,7 +179,7 @@ function Hero() {
           marginBottom: '1rem',
           color: T.textPri,
         }}>
-          Sai Srinath<br />
+          Sai Srinath Puducheri<br />
           <span style={{ color: T.violet }}>Enterprise</span>
         </h1>
 
@@ -627,7 +627,7 @@ function Footer() {
       maxWidth: 900, margin: '0 auto',
     }}>
       <span style={{ fontFamily: T.mono, fontSize: 12, color: T.textMuted }}>
-        © 2026 Sai Srinath · Hyderabad, India
+        © 2026 Sai Srinath Puducheri · Hyderabad, India
       </span>
       <span style={{ fontFamily: T.mono, fontSize: 12, color: T.textMuted }}>
         Built with React
