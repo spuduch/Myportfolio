@@ -161,29 +161,6 @@ function Hero() {
       maxWidth: 900, margin: '0 auto',
     }}>
       <div style={{ animation: 'fadeUp 0.7s ease both' }}>
-        {/* eyebrow */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 8,
-          marginBottom: '1.5rem',
-          background: T.violetDim,
-          border: `1px solid rgba(124,58,237,0.3)`,
-          borderRadius: 99, padding: '5px 14px',
-        }}>
-          <span style={{
-            width: 7, height: 7, borderRadius: '50%', background: '#22c55e',
-            position: 'relative',
-          }}>
-            <span style={{
-              position: 'absolute', inset: 0, borderRadius: '50%',
-              background: '#22c55e',
-              animation: 'pulse-ring 1.8s ease-out infinite',
-            }} />
-          </span>
-          <span style={{ fontSize: 12, fontFamily: T.mono, color: T.violetLt, fontWeight: 600 }}>
-            Open to new roles
-          </span>
-        </div>
-
         {/* headline */}
         <h1 style={{
           fontSize: 'clamp(36px, 6vw, 64px)',
